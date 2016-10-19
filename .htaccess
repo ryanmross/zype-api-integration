@@ -1,0 +1,5 @@
+AddCharset UTF-8 .utf8
+AddDefaultCharset UTF-8
+AddType application/x-httpd-php .opml
+Options +FollowSymLinks
+RewriteEngine On
