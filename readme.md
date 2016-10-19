@@ -12,3 +12,5 @@ Find the API keys from your Zype account and create api_config.ini that looks li
 admin_key = PUT ADMIN KEY HERE
 read_key = PUT READ KEY HERE
 ```
+
+OPML folder is a place to create outline files that group different MRSS feeds together.
