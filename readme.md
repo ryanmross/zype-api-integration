@@ -17,5 +17,10 @@ read_key = PUT READ KEY HERE
 
 OPML folder is a place to create outline files that group different MRSS feeds together.
 
+Included a key for security purposes.  Simply set the key to whatever you want in the line after the parse_str line, and then include a querystring when calling the script that says key=YOURKEY.
+
+Should look something like this:
+yoursite.com/mrss/?key=havockey&playlist_id=57f82ee66689bc0d1b0002fe&videotype=5
+
 Uses PHP-CURL-CLASS:
 https://github.com/php-curl-class/php-curl-class
