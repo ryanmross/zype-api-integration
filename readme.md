@@ -14,3 +14,6 @@ read_key = PUT READ KEY HERE
 ```
 
 OPML folder is a place to create outline files that group different MRSS feeds together.
+
+Uses PHP-CURL-CLASS:
+https://github.com/php-curl-class/php-curl-class
