@@ -1,5 +1,7 @@
 # Zype API MRSS Generator
 
+Creates an MRSS feed to your specifications using the Zype video api.
+
 
 Needs api_config.ini file with Zype API keys (currently looks for this in the parent folder).
 
