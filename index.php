@@ -61,11 +61,10 @@ if ($playlist->error) {
 	*/
 	$age_rating = "13";
 
-	// This is the category
-	$category = "Music";
+
 
 	// This is the language
-	$language = "EN";
+	$language = "en";
 
 	//<video_type> number values: 1-TV series, 2-Movie, 3-Animation, 4-Variety, 5-Sports, 6-Education, 7-Music, 8-News, 9-Automotive, 10-Finance, 11-Game, 12-Lifestyle, 16-Documentary.
 	if ($videotype) {
@@ -73,6 +72,15 @@ if ($playlist->error) {
 	} else {
 		$video_type = 7;
 	}
+	
+	// This is the category
+	if ($video_type == "5"){
+		$category = "Sports";
+		
+	} else {
+		$category = "Music";
+	}
+	
 
 	$screen_year = date("Y");
 	$link = 'http://havoc.tv';
@@ -93,7 +101,7 @@ if ($playlist->error) {
 	print "\n";
 	print('		<link>'. $link . '</link>');
 	print "\n";
-	print('		<description><![CDATA['. htmlspecialchars($playlist->response->response->description, ENT_QUOTES, "UTF-8") . ']]></description>');
+	print('		<description>' . htmlspecialchars($playlist->response->response->description, ENT_QUOTES, "UTF-8") . '</description>');
 	print "\n";
 	print('		<video_type>'. $video_type . '</video_type>');
 	print "\n";
