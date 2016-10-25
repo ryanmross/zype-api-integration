@@ -1,6 +1,7 @@
 {
     "require": {
         "php-curl-class/php-curl-class": "~7.0",
-        "silex/silex": "~2.0"
+        "silex/silex": "~2.0",
+        "monolog/monolog": "^1.21"
     }
 }
