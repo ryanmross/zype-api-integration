@@ -1,16 +1,19 @@
 <?php
 	
-ob_start();	
+//ob_start();	
 
 header('Content-Type: application/rss+xml; charset=utf-8');
 date_default_timezone_set('America/Los_Angeles');
-/*
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-*/
 
 require __DIR__ . '/vendor/autoload.php';
+
+$app = new Silex\Application();
+$app['debug'] = true;
+
+// Register the monolog logging service
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+  'monolog.logfile' => 'php://stderr',
+));
 
 use \Curl\Curl;
 
@@ -35,6 +38,7 @@ $key = '';
 parse_str($_SERVER['QUERY_STRING']);
 
 if ($key!= 'havockey'){
+	$app['monolog']->addDebug('Invalid key');
 	die('Invalid Key');
 }
 
@@ -340,6 +344,7 @@ if ($videos->error) {
 	print "\n";
 print('</rss>');
 
+$app['monolog']->addDebug('Printing output.');
 ob_end_flush(); 
 
 ?>
