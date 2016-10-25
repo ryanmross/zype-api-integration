@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "hash": "2de650e114a34629f816c5fe506d3b9f",
+    "content-hash": "70d11e439648fcdd8b129390ab8edeee",
     "packages": [
         {
             "name": "php-curl-class/php-curl-class",

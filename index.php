@@ -14,8 +14,9 @@ require __DIR__ . '/vendor/autoload.php';
 
 use \Curl\Curl;
 
-
-$ini_array = parse_ini_file("../api_config.ini");
+$admin_key = getenv('ADMIN_KEY');
+$read_key = getenv('READ_KEY');
+/* $ini_array = parse_ini_file("../api_config.ini");
 
 if (!$ini_array) {
 	print 'Could not find api_config.ini file.';
@@ -24,7 +25,7 @@ if (!$ini_array) {
 $admin_key = $ini_array['admin_key'];
 $read_key = $ini_array['read_key'];
 
-
+*/
 
 // global variables
 $playlist_id = '57928c6ee7b34c2c0a000006';
